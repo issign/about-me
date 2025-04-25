@@ -1,5 +1,4 @@
 .navbar {
-  background: #05d5ff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -34,11 +33,13 @@
   }
 
   &__links {
+    color: $color-primary;
+    font-weight: 00;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 1.3rem;
     height: 100%;
   }
 }
@@ -46,7 +47,10 @@
 #navbar__logo {
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
   display: flex;
   align-items: center;
+
+  &_k {
+    height: 60px;
+  }
 }
