@@ -1,10 +1,8 @@
 @media screen and (max-width: 960px) {
   .navbar {
     &__container {
-      background-color: aqua;
       display: flex;
       justify-content: space-between;
-      //   height: 80px;
       width: 100%;
       z-index: 1;
       max-width: 1300px;
@@ -12,17 +10,18 @@
     }
 
     &__menu {
+      font-size: 1.6rem;
       display: grid;
       grid-template-columns: auto;
-      margin: 0;
       width: 70%;
       position: absolute;
-      top: 100%;
       right: -1000px;
-      opacity: 1;
+      opacity: 0;
       transition: all 0.5s ease;
-      //   height: 50vh;
+      height: 100vh;
       z-index: -1;
+      background-color: rgb(80, 79, 79);
+      border-radius: 5% 0 0 5%;
     }
 
     &__menu.active {
@@ -30,7 +29,6 @@
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 100;
-      font-size: 1.6rem;
     }
 
     &__item {
@@ -38,6 +36,20 @@
       &:nth-child(8) {
         display: block;
       }
+    }
+
+    &__toggle .bar {
+      width: 25px;
+      height: 3px;
+      transition: all 0.3s ease;
+      background: #fff;
+      margin: 5px auto;
+    }
+
+    #mobile-menu {
+      position: absolute;
+      top: 60px;
+      right: 50px;
     }
   }
 }

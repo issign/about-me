@@ -11,14 +11,20 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    height: 80px;
-    z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 50px;
-    padding-left: 50px;
+    height: 80px;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  &__logo {
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
   &__menu {
@@ -31,31 +37,19 @@
   &__item {
     height: 80px;
 
-    &:nth-child(1),
-    &:nth-child(8) {
+    &:first-child,
+    &:last-child {
       display: none;
     }
   }
 
   &__links {
-    color: $color-primary;
-    font-weight: 00;
+    color: $text-primary-color;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    padding: 0 1.3rem;
+    padding: 0 2rem;
     height: 100%;
-  }
-}
-
-.navbar__logo {
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-
-  &_k {
-    height: 60px;
   }
 }

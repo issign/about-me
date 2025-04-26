@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap");
 .navbar {
   height: 80px;
   display: flex;
@@ -12,14 +12,19 @@
 .navbar__container {
   display: flex;
   justify-content: space-between;
-  height: 80px;
-  z-index: 1;
   width: 100%;
-  max-width: 1300px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 50px;
-  padding-left: 50px;
+  height: 80px;
+  padding-right: 7%;
+  padding-left: 7%;
+}
+.navbar__logo {
+  color: rgb(93, 195, 163);
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .navbar__menu {
   display: flex;
@@ -30,33 +35,21 @@
 .navbar__item {
   height: 80px;
 }
-.navbar__item:nth-child(1), .navbar__item:nth-child(8) {
+.navbar__item:first-child, .navbar__item:last-child {
   display: none;
 }
 .navbar__links {
-  color: #6e6e6e;
-  font-weight: 0;
+  color: #464646;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 0 1.3rem;
+  padding: 0 2rem;
   height: 100%;
-}
-
-.navbar__logo {
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-.navbar__logo_k {
-  height: 60px;
 }
 
 @media screen and (max-width: 960px) {
   .navbar__container {
-    background-color: aqua;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -65,26 +58,39 @@
     padding: 0;
   }
   .navbar__menu {
+    font-size: 1.6rem;
     display: grid;
     grid-template-columns: auto;
-    margin: 0;
     width: 70%;
     position: absolute;
-    top: 100%;
     right: -1000px;
-    opacity: 1;
+    opacity: 0;
     transition: all 0.5s ease;
+    height: 100vh;
     z-index: -1;
+    background-color: rgb(80, 79, 79);
+    border-radius: 5% 0 0 5%;
   }
   .navbar__menu.active {
     right: 0;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 100;
-    font-size: 1.6rem;
   }
   .navbar__item:nth-child(1), .navbar__item:nth-child(8) {
     display: block;
+  }
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    transition: all 0.3s ease;
+    background: #fff;
+    margin: 5px auto;
+  }
+  .navbar #mobile-menu {
+    position: absolute;
+    top: 60px;
+    right: 50px;
   }
 }
 *,
@@ -93,5 +99,5 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Tuffy", sans-serif;
+  font-family: "National Park", sans-serif;
 }/*# sourceMappingURL=style.css.map */
