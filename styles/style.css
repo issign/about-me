@@ -35,7 +35,7 @@
 .navbar__item {
   height: 80px;
 }
-.navbar__item:first-child, .navbar__item:last-child {
+.navbar__item:last-child {
   display: none;
 }
 .navbar__links {
@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 0 2rem;
+  padding: 0 1.3rem;
   height: 100%;
 }
 
@@ -53,9 +53,19 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    z-index: 1;
-    max-width: 1300px;
-    padding: 0;
+  }
+  .navbar #mobile-menu {
+    position: absolute;
+    top: 25%;
+    right: 7%;
+  }
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+    width: 35px;
+    height: 6px;
+    background: rgb(93, 195, 163);
+    margin: 5px auto;
   }
   .navbar__menu {
     font-size: 1.6rem;
@@ -65,32 +75,27 @@
     position: absolute;
     right: -1000px;
     opacity: 0;
-    transition: all 0.5s ease;
-    height: 100vh;
+    transition: all 0.5s ease-in-out;
     z-index: -1;
-    background-color: rgb(80, 79, 79);
-    border-radius: 5% 0 0 5%;
+    background-color: rgb(32, 32, 32);
+    padding: 80px 0;
+  }
+  .navbar__links, .navbar__contact {
+    color: #fff;
   }
   .navbar__menu.active {
     right: 0;
     opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 100;
+    transition: all 0.5s ease-in-out;
   }
-  .navbar__item:nth-child(1), .navbar__item:nth-child(8) {
+  .navbar__contact {
+    padding-top: 25px;
+  }
+  .navbar__item:last-child {
     display: block;
   }
-  .navbar__toggle .bar {
-    width: 25px;
-    height: 3px;
-    transition: all 0.3s ease;
-    background: #fff;
-    margin: 5px auto;
-  }
-  .navbar #mobile-menu {
-    position: absolute;
-    top: 60px;
-    right: 50px;
+  .navbar__item:nth-child(6) {
+    display: none;
   }
 }
 *,
