@@ -1,0 +1,43 @@
+@media screen and (max-width: 960px) {
+  .navbar {
+    &__container {
+      background-color: aqua;
+      display: flex;
+      justify-content: space-between;
+      //   height: 80px;
+      width: 100%;
+      z-index: 1;
+      max-width: 1300px;
+      padding: 0;
+    }
+
+    &__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 70%;
+      position: absolute;
+      top: 100%;
+      right: -1000px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      //   height: 50vh;
+      z-index: -1;
+    }
+
+    &__menu.active {
+      right: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 100;
+      font-size: 1.6rem;
+    }
+
+    &__item {
+      &:nth-child(1),
+      &:nth-child(8) {
+        display: block;
+      }
+    }
+  }
+}
