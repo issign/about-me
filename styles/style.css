@@ -67,6 +67,15 @@
     background: rgb(93, 195, 163);
     margin: 5px auto;
   }
+  .navbar__toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar__toggle.active .bar:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar__toggle.active .bar:last-child {
+    transform: translateY(-14px) rotate(-45deg);
+  }
   .navbar__menu {
     font-size: 1.6rem;
     display: grid;
@@ -91,10 +100,13 @@
   .navbar__contact {
     padding-top: 25px;
   }
-  .navbar__icons {
+  .navbar__container-icons {
     display: flex;
     justify-content: space-between;
     padding: 20px 270px;
+  }
+  .navbar__icons {
+    color: #fff;
   }
   .navbar__item:last-child {
     display: block;

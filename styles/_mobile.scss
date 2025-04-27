@@ -21,6 +21,18 @@
       margin: 5px auto;
     }
 
+    &__toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &__toggle.active .bar:first-child {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &__toggle.active .bar:last-child {
+      transform: translateY(-14px) rotate(-45deg);
+    }
+
     &__menu {
       font-size: 1.6rem;
       display: grid;
@@ -50,10 +62,14 @@
       padding-top: 25px;
     }
 
-    &__icons {
+    &__container-icons {
       display: flex;
       justify-content: space-between;
       padding: 20px 270px;
+    }
+
+    &__icons {
+      color: #fff;
     }
 
     &__item {
