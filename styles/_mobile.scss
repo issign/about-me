@@ -50,6 +50,12 @@
       padding-top: 25px;
     }
 
+    &__icons {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 270px;
+    }
+
     &__item {
       &:last-child {
         display: block;
