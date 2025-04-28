@@ -115,6 +115,27 @@
     display: none;
   }
 }
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.main__context {
+  width: 40%;
+}
+.main__title {
+  font-size: 2.5rem;
+}
+.main__subtitle {
+  color: #464646;
+}
+
 *,
 *::before,
 *::after {
