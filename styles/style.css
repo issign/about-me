@@ -210,19 +210,38 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 .main__container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  justify-content: center;
   align-items: center;
   height: 100vh;
 }
 .main__context {
-  width: 40%;
+  padding: 0 15%;
+}
+.main__greet {
+  font-size: 3rem;
+  margin-bottom: 5px;
 }
 .main__title {
-  color: #70c8ff;
-  font-size: 2.5rem;
+  color: rgb(20, 229, 252);
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+.main__subtitle {
+  font-size: 1.5rem;
+}
+.main__img-container {
+  z-index: 1;
+  padding: 0 15%;
+}
+.main__img {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px dashed rgb(20, 229, 252);
 }
 
 *,
