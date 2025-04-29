@@ -3,12 +3,11 @@
     &__container {
       display: flex;
       justify-content: space-between;
-      width: 100%;
     }
 
     #mobile-menu {
       position: absolute;
-      top: 25%;
+      top: 30%;
       right: 7%;
     }
 
@@ -18,7 +17,7 @@
       width: 35px;
       height: 6px;
       background: $color-primary;
-      margin: 5px auto;
+      margin: 7px auto;
     }
 
     &__toggle.active .bar:nth-child(2) {
@@ -30,26 +29,35 @@
     }
 
     &__toggle.active .bar:last-child {
-      transform: translateY(-14px) rotate(-45deg);
+      transform: translateY(-18px) rotate(-45deg);
     }
 
     &__menu {
-      font-size: 1.6rem;
       display: grid;
       grid-template-columns: auto;
       width: 70%;
-      position: absolute;
+      height: 100vh;
+      position: fixed;
       right: -1000px;
       opacity: 0;
       transition: all 0.5s ease-in-out;
       z-index: -1;
-      background-color: rgb(32, 32, 32);
+      background-color: rgb(29, 29, 29);
       padding: 80px 0;
     }
 
     &__links,
     &__contact {
       color: #fff;
+      font-size: 2rem;
+      display: inline-block;
+    }
+
+    &__links {
+      &::after {
+        bottom: -4px;
+        height: 3px;
+      }
     }
 
     &__menu.active {
@@ -58,26 +66,37 @@
       transition: all 0.5s ease-in-out;
     }
 
-    &__contact {
-      padding-top: 25px;
-    }
-
     &__container-icons {
       display: flex;
       justify-content: space-between;
-      padding: 20px 270px;
+      padding-top: 15px;
     }
 
     &__icons {
       color: #fff;
+      transition: 0.4s ease;
+
+      &.fa-envelope:hover {
+        color: #03c75a;
+      }
+
+      &.fa-linkedin:hover {
+        color: #0077b5;
+      }
+
+      &.fa-instagram:hover {
+        color: #fd1d1d;
+      }
     }
 
     &__item {
+      padding: 0;
+
       &:last-child {
         display: block;
       }
 
-      &:nth-child(6) {
+      &:nth-child(5) {
         display: none;
       }
     }

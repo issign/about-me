@@ -112,6 +112,7 @@ html {
   display: block;
   background-color: rgb(20, 229, 252);
   transition: 0.4s ease;
+  left: 50%;
 }
 .navbar__links:hover {
   color: rgb(20, 229, 252);
@@ -119,6 +120,7 @@ html {
   text-shadow: rgb(20, 229, 252) 0 0 20px;
 }
 .navbar__links:hover::after {
+  left: 0;
   width: 100%;
 }
 
@@ -126,11 +128,10 @@ html {
   .navbar__container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
   }
   .navbar #mobile-menu {
     position: absolute;
-    top: 25%;
+    top: 30%;
     right: 7%;
   }
   .navbar__toggle .bar {
@@ -139,7 +140,7 @@ html {
     width: 35px;
     height: 6px;
     background: rgb(20, 229, 252);
-    margin: 5px auto;
+    margin: 7px auto;
   }
   .navbar__toggle.active .bar:nth-child(2) {
     opacity: 0;
@@ -148,44 +149,60 @@ html {
     transform: translateY(8px) rotate(45deg);
   }
   .navbar__toggle.active .bar:last-child {
-    transform: translateY(-14px) rotate(-45deg);
+    transform: translateY(-18px) rotate(-45deg);
   }
   .navbar__menu {
-    font-size: 1.6rem;
     display: grid;
     grid-template-columns: auto;
     width: 70%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     right: -1000px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     z-index: -1;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(29, 29, 29);
     padding: 80px 0;
   }
   .navbar__links, .navbar__contact {
     color: #fff;
+    font-size: 2rem;
+    display: inline-block;
+  }
+  .navbar__links::after {
+    bottom: -4px;
+    height: 3px;
   }
   .navbar__menu.active {
     right: 0;
     opacity: 1;
     transition: all 0.5s ease-in-out;
   }
-  .navbar__contact {
-    padding-top: 25px;
-  }
   .navbar__container-icons {
     display: flex;
     justify-content: space-between;
-    padding: 20px 270px;
+    padding-top: 15px;
   }
   .navbar__icons {
     color: #fff;
+    transition: 0.4s ease;
+  }
+  .navbar__icons.fa-envelope:hover {
+    color: #03c75a;
+  }
+  .navbar__icons.fa-linkedin:hover {
+    color: #0077b5;
+  }
+  .navbar__icons.fa-instagram:hover {
+    color: #fd1d1d;
+  }
+  .navbar__item {
+    padding: 0;
   }
   .navbar__item:last-child {
     display: block;
   }
-  .navbar__item:nth-child(6) {
+  .navbar__item:nth-child(5) {
     display: none;
   }
 }
@@ -207,6 +224,7 @@ html {
   color: #70c8ff;
   font-size: 2.5rem;
 }
+
 *,
 *::before,
 *::after {
