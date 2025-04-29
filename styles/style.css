@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -49,31 +50,36 @@ html {
   }
 }
 .navbar {
-  height: 80px;
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 10%;
 }
 .navbar__container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 80px;
-  padding-right: 7%;
-  padding-left: 7%;
+  height: 100px;
 }
 .navbar__logo {
-  color: rgb(93, 195, 163);
-  font-weight: 700;
-  font-size: 2rem;
+  font-family: "Rampart One", sans-serif;
+  color: rgb(20, 229, 252);
+  font-weight: 600;
+  font-size: 2.5rem;
   cursor: pointer;
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: transform 0.4s ease;
+}
+.navbar__logo:hover {
+  transform: scale(1.1);
 }
 .navbar__menu {
   display: flex;
@@ -82,19 +88,38 @@ html {
   text-align: center;
 }
 .navbar__item {
-  height: 80px;
+  padding: 0 1.3rem;
 }
 .navbar__item:last-child {
   display: none;
 }
 .navbar__links {
-  color: #464646;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 0 1.3rem;
-  height: 100%;
+  transition: 0.4s ease;
+}
+.navbar__links::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  display: block;
+  background-color: rgb(20, 229, 252);
+  transition: 0.4s ease;
+}
+.navbar__links:hover {
+  color: rgb(20, 229, 252);
+  transform: scale(1.1);
+  text-shadow: rgb(20, 229, 252) 0 0 20px;
+}
+.navbar__links:hover::after {
+  width: 100%;
 }
 
 @media screen and (max-width: 960px) {
@@ -113,7 +138,7 @@ html {
     cursor: pointer;
     width: 35px;
     height: 6px;
-    background: rgb(93, 195, 163);
+    background: rgb(20, 229, 252);
     margin: 5px auto;
   }
   .navbar__toggle.active .bar:nth-child(2) {
@@ -182,10 +207,6 @@ html {
   color: #70c8ff;
   font-size: 2.5rem;
 }
-.main__subtitle {
-  color: #464646;
-}
-
 *,
 *::before,
 *::after {
