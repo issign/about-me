@@ -255,7 +255,7 @@ html {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 10%;
   height: 100vh;
@@ -286,6 +286,83 @@ html {
 .about__info {
   font-size: 2.5rem;
   margin-bottom: 15px;
+}
+
+.skills {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  height: 100vh;
+  padding-top: 100px;
+}
+.skills__header {
+  font-size: 5rem;
+  color: rgb(20, 229, 252);
+}
+.skills__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  height: 100%;
+}
+.skills__programming {
+  margin-right: 20px;
+}
+.skills__programming--header {
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.skills__programming--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.skills__frontend {
+  margin-right: 20px;
+}
+.skills__frontend--header {
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.skills__frontend--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.skills__backend {
+  margin-right: 20px;
+}
+.skills__backend--header {
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.skills__backend--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.skills__skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.skills__icon {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  background-color: rgb(218, 218, 218);
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.skills .fa-java {
+  color: #f89820;
 }
 
 *,
