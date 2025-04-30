@@ -251,6 +251,43 @@ html {
   border: 2px dashed rgb(20, 229, 252);
 }
 
+.about {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  height: 100vh;
+  padding-top: 100px;
+}
+.about__header {
+  font-size: 5rem;
+  color: rgb(20, 229, 252);
+}
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.about__img--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.about__img {
+  width: 70%;
+}
+.about__label {
+  color: rgb(20, 229, 252);
+}
+.about__info {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
 *,
 *::before,
 *::after {
