@@ -263,6 +263,7 @@ html {
   padding: 0 10%;
   height: 100vh;
   padding-top: 100px;
+  padding-bottom: 150px;
 }
 .about__header {
   font-size: 5rem;
