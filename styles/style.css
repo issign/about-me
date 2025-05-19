@@ -516,6 +516,21 @@ html {
   color: black;
 }
 
+.contact {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  height: 100vh;
+  padding-top: 100px;
+}
+.contact__header {
+  font-size: 5rem;
+  color: rgb(20, 229, 252);
+}
+
 *,
 *::before,
 *::after {
