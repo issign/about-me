@@ -464,6 +464,57 @@ html {
   font-size: 5rem;
   color: rgb(20, 229, 252);
 }
+.portfolios__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  height: 100%;
+  align-items: center;
+}
+.portfolios__card {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(20, 229, 252);
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 0px 15px rgb(20, 229, 252);
+}
+.portfolios__card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 25px rgb(20, 229, 252);
+}
+.portfolios__img {
+  border-radius: 1rem;
+}
+.portfolios__name {
+  font-size: 1.5rem;
+  margin: 1rem 0 1rem;
+}
+.portfolios__btns {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+.portfolios__link {
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid rgb(20, 229, 252);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.portfolios__link:hover {
+  background-color: rgb(20, 229, 252);
+  color: black;
+}
 
 *,
 *::before,
